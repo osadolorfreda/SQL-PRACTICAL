@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Members</title><link rel="stylesheet" href="/css/style.css"></head><body>
+<div class="container">
+  <h2>Members</h2>
+  <form action="/members/add" method="post">
+    <input name="family_id" placeholder="Family ID" required>
+    <input name="first_name" placeholder="First name" required>
+    <input name="last_name" placeholder="Last name">
+    <input name="email" placeholder="Email">
+    <input name="phone" placeholder="Phone">
+    <button>Add Member</button>
+  </form>
+  <h3>All Members</h3>
+  <table>
+    <tr><th>Name</th><th>Family</th><th>Email</th><th>Phone</th></tr>
+    <% members.forEach(m => { %>
+      <tr>
+        <td><%= m.first_name %> <%= m.last_name %></td>
+        <td><%= m.family_name %></td>
+        <td><%= m.email %></td>
+        <td><%= m.phone %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <p><a href="/">Back</a></p>
+</div></body></html>

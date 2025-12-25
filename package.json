@@ -1,0 +1,18 @@
+{
+  "name": "family-budget-system",
+  "version": "1.0.0",
+  "description": "Family Budget Management System - Node.js + Express + MySQL",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.1.0"
+  }
+}

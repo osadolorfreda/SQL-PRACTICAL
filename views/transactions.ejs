@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Transactions</title><link rel="stylesheet" href="/css/style.css"></head><body>
+<div class="container">
+  <h2>Transactions</h2>
+  <form action="/transactions/add" method="post">
+    <input name="family_id" placeholder="Family ID" required>
+    <input name="member_id" placeholder="Member ID">
+    <input name="category_id" placeholder="Category ID">
+    <input name="amount" placeholder="Amount" required>
+    <input name="txn_date" placeholder="YYYY-MM-DD" required>
+    <input name="note" placeholder="Note">
+    <button>Add</button>
+  </form>
+
+  <h3>Recent Transactions</h3>
+  <table>
+    <tr><th>Date</th><th>Member</th><th>Category</th><th>Amount</th><th>Note</th></tr>
+    <% transactions.forEach(t => { %>
+      <tr>
+        <td><%= t.txn_date.toISOString().slice(0,10) %></td>
+        <td><%= t.member_first || '' %></td>
+        <td><%= t.category_name || '' %></td>
+        <td><%= t.amount %></td>
+        <td><%= t.note %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <p><a href="/">Back</a></p>
+</div></body></html>

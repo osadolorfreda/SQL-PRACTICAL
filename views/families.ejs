@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Families</title><link rel="stylesheet" href="/css/style.css"></head><body>
+<div class="container">
+  <h2>Families</h2>
+  <form action="/families/add" method="post">
+    <input name="family_name" placeholder="Family name" required>
+    <button>Add Family</button>
+  </form>
+  <h3>All Families</h3>
+  <ul>
+    <% families.forEach(f => { %>
+      <li><%= f.family_name %> (id: <%= f.family_id %>)</li>
+    <% }) %>
+  </ul>
+  <p><a href="/">Back</a></p>
+</div></body></html>

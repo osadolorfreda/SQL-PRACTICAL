@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Categories</title><link rel="stylesheet" href="/css/style.css"></head><body>
+<div class="container">
+  <h2>Categories</h2>
+  <form action="/categories/add" method="post">
+    <input name="family_id" placeholder="Family ID" required>
+    <input name="name" placeholder="Category name" required>
+    <select name="type"><option value="expense">Expense</option><option value="income">Income</option></select>
+    <button>Add Category</button>
+  </form>
+
+  <h3>All Categories</h3>
+  <table>
+    <tr><th>Name</th><th>Type</th><th>Family</th></tr>
+    <% categories.forEach(c => { %>
+      <tr><td><%= c.name %></td><td><%= c.type %></td><td><%= c.family_name %></td></tr>
+    <% }) %>
+  </table>
+  <p><a href="/">Back</a></p>
+</div></body></html>

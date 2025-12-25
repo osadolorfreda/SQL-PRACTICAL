@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; background:#f7f7f7; color:#222; }
+.container { max-width:900px; margin:30px auto; background:#fff; padding:20px; box-shadow:0 0 8px rgba(0,0,0,0.08); }
+h1,h2 { color:#0b5ed7; }
+table { width:100%; border-collapse:collapse; margin-top:10px; }
+table, th, td { border:1px solid #ddd; padding:8px; }
+input, select { padding:6px; margin:6px 0; width:100%; max-width:400px; }
+button { padding:8px 12px; background:#0b5ed7; color:white; border:none; cursor:pointer; }

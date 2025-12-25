@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Report</title><link rel="stylesheet" href="/css/style.css"></head><body>
+<div class="container">
+  <h2>Summary Report for Family <%= family_id %></h2>
+  <p>Total Income: <%= income %></p>
+  <p>Total Expense: <%= expense %></p>
+  <p>Net: <%= (income - Math.abs(expense)) %></p>
+  <p><a href="/">Back</a></p>
+</div></body></html>
